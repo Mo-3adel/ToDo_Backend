@@ -1,0 +1,23 @@
+[
+  {
+    "projectTitle": "project1",
+    "totalTasks": 1,
+    "completedTasks": 1,
+    "pendingTasks": 0,
+    "completionRate": "100.00%"
+  },
+  {
+    "projectTitle": "project1V1",
+    "totalTasks": 2,
+    "completedTasks": 1,
+    "pendingTasks": 1,
+    "completionRate": "50.00%"
+  },
+  {
+    "projectTitle": "project1V2",
+    "totalTasks": 0,
+    "completedTasks": 0,
+    "pendingTasks": 0,
+    "completionRate": 0
+  }
+]

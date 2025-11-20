@@ -1,0 +1,512 @@
+{
+	"info": {
+		"_postman_id": "826566ff-0a25-4047-a35c-173a81520441",
+		"name": "Todo_projects",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49861351",
+		"_collection_link": "https://ps-mohamed-adel-3918427.postman.co/workspace/mohamed-adel's-Workspace~6b5fdf8d-3f27-4d90-80de-73b31ecdb6b1/collection/49861351-826566ff-0a25-4047-a35c-173a81520441?action=share&source=collection_link&creator=49861351"
+	},
+	"item": [
+		{
+			"name": "getProjects",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/projects",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"projects"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createProjects",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\":\"project1V3\",\n    \"description\":\"P1 v3\",\n    \"teamMembers\":[\"Ahmed\",\"Omar\",\"Ali\"],\n    \"dueDate\":\"2025-06-30\",\n    \"Members\":[]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/projects",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"projects"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateProjects",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  { \n    \"title\":\"project1V4\",\n    \"description\":\"P1 v3\",\n    \"teamMembers\":[\"Ahmed\",\"Omar\"],\n    \"dueDate\":\"2025-07-30\",\n    \"Members\":[]\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/projects/691f974cdf6d9d6e3f1f0f19",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"projects",
+						"691f974cdf6d9d6e3f1f0f19"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteProjects",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\":\"p3\",\n    \"description\":\"P3 v3\",\n    \"teamMembers\":[\"Moaz\",\"Ali\"],\n    \"dueDate\":\"2025-02-16\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/projects/690f92e81e0416e5569dadcc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"projects",
+						"690f92e81e0416e5569dadcc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createTasks",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\":\"new task s55\",\n    \"description\":\"new task\",\n    \"assignedTo\":[],\n    \"dueDate\":\"2025-06-05\",\n    \"status\":\"pending\",\n    \"project\":\"project1V1\"\n\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/tasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTasks",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\":\"task2\",\n    \"description\":\"hello from t2\",\n    \"assignedTo\":\"Omar\",\n    \"dueDate\":\"2025-02-19\",\n    \"status\":\"pending\",\n    \"project\":\"690f7801c271f36ac4552573\"\n\n\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/tasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateTasks",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\":\"new task s55\",\n    \"description\":\"new task\",\n    \"assignedTo\":[\"Ahmed@gmail.com\"],\n    \"dueDate\":\"2025-06-10\",\n    \"status\":\"pending\",\n    \"project\":\"project1V1\"\n\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/tasks/691f963edf6d9d6e3f1f0f0b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"tasks",
+						"691f963edf6d9d6e3f1f0f0b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteTask",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\":\"task2\",\n    \"description\":\"hello from t2\",\n    \"assignedTo\":\"Omar\",\n    \"dueDate\":\"2025-02-19\",\n    \"status\":\"pending\",\n    \"project\":\"690f7801c271f36ac4552573\"\n\n\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/tasks/690fc1b0f0cc34c0eefcb8ad",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"tasks",
+						"690fc1b0f0cc34c0eefcb8ad"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "teamRoute",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"ahmed Adel\",\n    \"role\":\"CS\",\n    \"email\":\"Ahmed@gmail.com\",\n    \"projects\":[\"6919c6cfbfc8d3db7369d8c9\"],\n    \"task\":[]\n\n\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/team",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"team"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTeam",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/team",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"team"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getProjects",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Visualization Script",
+							"// Visualization Script",
+							"var template = `",
+							"<div style=\"font-family: Arial, sans-serif; padding: 20px;\">",
+							"    <h2 style=\"color: #333; margin-bottom: 20px;\">Projects Overview</h2>",
+							"    <canvas id=\"projectChart\" height=\"100\"></canvas>",
+							"</div>",
+							"",
+							"<script src=\"https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js\"></script>",
+							"<script>",
+							"    var ctx = document.getElementById(\"projectChart\");",
+							"    var projectChart = new Chart(ctx, {",
+							"        type: \"bar\",",
+							"        data: {",
+							"            labels: [],",
+							"            datasets: [",
+							"                {",
+							"                    label: 'Team Members',",
+							"                    backgroundColor: 'rgba(255, 99, 132, 0.6)',",
+							"                    borderColor: 'rgba(255, 99, 132, 1)',",
+							"                    borderWidth: 1,",
+							"                    data: []",
+							"                },",
+							"                {",
+							"                    label: 'Tasks',",
+							"                    backgroundColor: 'rgba(54, 162, 235, 0.6)',",
+							"                    borderColor: 'rgba(54, 162, 235, 1)',",
+							"                    borderWidth: 1,",
+							"                    data: []",
+							"                },",
+							"                {",
+							"                    label: 'Members',",
+							"                    backgroundColor: 'rgba(75, 192, 192, 0.6)',",
+							"                    borderColor: 'rgba(75, 192, 192, 1)',",
+							"                    borderWidth: 1,",
+							"                    data: []",
+							"                }",
+							"            ]",
+							"        },",
+							"        options: {",
+							"            responsive: true,",
+							"            legend: { ",
+							"                display: true,",
+							"                position: 'top'",
+							"            },",
+							"            title: {",
+							"                display: true,",
+							"                text: 'Project Metrics Comparison',",
+							"                fontSize: 16",
+							"            },",
+							"            scales: {",
+							"                xAxes: [{",
+							"                    display: true,",
+							"                    scaleLabel: {",
+							"                        display: true,",
+							"                        labelString: 'Projects'",
+							"                    }",
+							"                }],",
+							"                yAxes: [{",
+							"                    display: true,",
+							"                    scaleLabel: {",
+							"                        display: true,",
+							"                        labelString: 'Count'",
+							"                    },",
+							"                    ticks: {",
+							"                        beginAtZero: true,",
+							"                        stepSize: 1",
+							"                    }",
+							"                }]",
+							"            }",
+							"        }",
+							"    });",
+							"",
+							"    pm.getData(function (err, value) {",
+							"        projectChart.data.labels = value.projectLabels;",
+							"        projectChart.data.datasets[0].data = value.teamMembersCount;",
+							"        projectChart.data.datasets[1].data = value.tasksCount;",
+							"        projectChart.data.datasets[2].data = value.membersCount;",
+							"        projectChart.update();",
+							"    });",
+							"</script>",
+							"`;",
+							"",
+							"function createPayload() {",
+							"    var responseData = pm.response.json();",
+							"    var projects = responseData.projects || [];",
+							"    ",
+							"    var projectLabels = [];",
+							"    var teamMembersCount = [];",
+							"    var tasksCount = [];",
+							"    var membersCount = [];",
+							"    ",
+							"    for (var i = 0; i < projects.length; i++) {",
+							"        var project = projects[i];",
+							"        projectLabels.push(project.title || 'Project ' + (i + 1));",
+							"        teamMembersCount.push(project.teamMembers ? project.teamMembers.length : 0);",
+							"        tasksCount.push(project.tasks ? project.tasks.length : 0);",
+							"        membersCount.push(project.Members ? project.Members.length : 0);",
+							"    }",
+							"    ",
+							"    return {",
+							"        projectLabels: projectLabels,",
+							"        teamMembersCount: teamMembersCount,",
+							"        tasksCount: tasksCount,",
+							"        membersCount: membersCount",
+							"    };",
+							"}",
+							"",
+							"pm.visualizer.set(template, createPayload());"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/projects",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"projects"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reportGeneration",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/report",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"report"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateTeam",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n    \"name\":\"ahmed Adel\",\n    \"role\":\"eng\",\n    \"email\":\"Ahmed@gmail.com\",\n    \"projects\":[\"6919c6cfbfc8d3db7369d8c9\"],\n    \"task\":[]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/team/6919c71dbfc8d3db7369d8ce",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"team",
+						"6919c71dbfc8d3db7369d8ce"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

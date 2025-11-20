@@ -4,7 +4,8 @@ const mongoose = require('mongoose');
 const TaskSchema = new mongoose.Schema({
     title: {
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     description: {
         type: String,
@@ -16,7 +17,8 @@ const TaskSchema = new mongoose.Schema({
         default: 'pending'
     },
     assignedTo: {
-        type: [String],
+        type: [mongoose.Schema.Types.ObjectId],
+        ref: 'Team',
         required: true
     },
     dueDate: {
@@ -29,8 +31,7 @@ const TaskSchema = new mongoose.Schema({
     },
     project:
     {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Projects',
+        type: String,
         required: true
     }
 });

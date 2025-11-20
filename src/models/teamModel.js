@@ -27,6 +27,7 @@ const teamSchema = new Schema({
         type: [Schema.Types.ObjectId],  
         ref: 'Task'
     }   
-})
+});
+
 Team = mongoose.model('Team', teamSchema);
 module.exports = Team;  
