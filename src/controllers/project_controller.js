@@ -12,10 +12,10 @@ const getAllProjects = async (req, res) => {
 }
 
 
-//for demonstration i will get project by title sent as req parameter
-// ex /api/v1/projects/projectTitle
-// i could have used id but this is just to show another way of querying
-// also could be done by sending it as req body but would need to change the routers order to avoid conflict with create project route
+// For demonstration i will get project by title sent as req parameter
+// Ex /api/v1/projects/projectTitle
+// I could have used id but this is just to show another way of querying
+// Also could be done by sending it as req body but would need to change the routers order to avoid conflict with create project route
 
 const getProjectByTitle = async (req, res) => {   
     try{
@@ -49,8 +49,8 @@ const createProject = async (req, res) => {
     }   
 }
 
-//assume id is passed as req parameter
-// ex /api/v1/projects/:id
+// Assume id is passed as req parameter
+// Ex /api/v1/projects/:id
 const updateProject = async (req, res) => {   
     try{
         const { id } = req.params;
@@ -70,7 +70,7 @@ const updateProject = async (req, res) => {
     }
 }
 
-//assume id is passed as req parameter
+// Assume id is passed as req parameter
 // ex /api/v1/projects/:id
 const deleteProject = async (req, res) => {   
     try{

@@ -3,7 +3,7 @@ const Project = require('../models/project_model');
 const Team = require('../models/teamModel');
 
 // Helper function to convert emails to team member IDs
-//instead of writing id everytime we pass an email since i made it unique
+// Instead of writing id everytime we pass an email since i made it unique
 const convertEmailsToIds = async (assignedTo) => {
     // Ensure assignedTo is an array
     if (!assignedTo) return [];
@@ -11,7 +11,7 @@ const convertEmailsToIds = async (assignedTo) => {
     if (assignedToArray.length === 0) return [];
 
     // Separate emails and IDs
-    // we can use ids directly if passed
+    // We can use ids directly if passed
     const emails = assignedToArray.filter(item => typeof item === 'string' && item.includes('@'));
     const ids = assignedToArray.filter(item => typeof item === 'string' && !item.includes('@') && item.match(/^[0-9a-fA-F]{24}$/));
 
@@ -34,7 +34,7 @@ const convertEmailsToIds = async (assignedTo) => {
 };
 
 // Tasks Crud Operations
-// will use project reference to link tasks to projects
+// Will use project reference to link tasks to projects
 const createTask = async (req, res) => {
     try {
         const { title, description, assignedTo, dueDate, status, project} = req.body;
@@ -82,7 +82,7 @@ const updateTask = async (req, res) => {
     try {
         const { id } = req.params;
 
-        //hold existing task id
+        //hold existing task id so we can use it later to remove the task from team members and projects
         const existingTask = await Task.findById(id);
         if (!existingTask) {
             return res.status(404).send('Task not found');

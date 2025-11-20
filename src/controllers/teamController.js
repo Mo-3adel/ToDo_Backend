@@ -53,18 +53,18 @@ const updateTeamMember = async (req, res) => {
     const { id } = req.params;
     const { name, role, email, projects = [], tasks = [] } = req.body;
 
-    // 1️⃣ Get old member data
+    // Get old member data and keep it for comparison of old and new tasks/projects
     const oldMember = await Team.findById(id);
     if (!oldMember) return res.status(404).json({ message: "Team member not found" });
 
-    // 2️⃣ Update member fields
+    // Update member fields
     const updatedMember = await Team.findByIdAndUpdate(
       id,
       { name, role, email, projects, tasks },
       { new: true }
     );
 
-    // 3️⃣ Sync projects
+    // Sync projects remove the member from old project if he been un assigned to and him to the new assigned projects
     const removedProjects = oldMember.projects.filter(
       p => !projects.includes(p.toString())
     );
@@ -84,7 +84,7 @@ const updateTeamMember = async (req, res) => {
         { $addToSet: { Members: id } }
       );
 
-    // 4️⃣ Sync tasks
+    // Sync tasks see if there is changes in task and remove the member from the task member if its deleted and add it to the new ones if new tasks been added
     const removedTasks = oldMember.tasks.filter(
       t => !tasks.includes(t.toString())
     );
