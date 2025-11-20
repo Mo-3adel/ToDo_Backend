@@ -155,7 +155,7 @@ src/
   middlewares/   # Logging, error handling, etc.
   utils/         # Helpers (reportsGen.js)
   index.js       # App entry (server start)
-  app.js         # Uses mideleWares and main roots
+  app.js         # Uses mideleWares and main routes
 ```
 
 Architecture
