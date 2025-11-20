@@ -176,7 +176,7 @@ Data relationships
 - Consider adding:
   - a Project first without any tasks 
   - create a task than assign it to the project created
-  - create a team and assign it to a task or project
+  - create a team and assign it to a tasks or project
 
 ---
 
