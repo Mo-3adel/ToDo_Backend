@@ -18,7 +18,7 @@ Built with Express and MongoDB (Mongoose).
 1. Clone the repo and install dependencies:
 
 ```bash
-git clone <repo-url>
+git clone <https://github.com/Mo-3adel/ToDo_Backend>
 cd ToDo_Backend
 npm install
 ```
@@ -155,6 +155,7 @@ src/
   middlewares/   # Logging, error handling, etc.
   utils/         # Helpers (reportsGen.js)
   index.js       # App entry (server start)
+  app.js         # Uses mideleWares and main roots
 ```
 
 Architecture
@@ -173,9 +174,9 @@ Data relationships
 
 - Import the included Postman collection: `Todo_projects.postman_collection.json` and run the requests.
 - Consider adding:
-  - Authentication (JWT) and authorization
-  - Validation middleware (Joi / express-validator)
-  - Unit / integration tests
+  - a Project first without any tasks 
+  - create a task than assign it to the project created
+  - create a team and assign it to a task or project
 
 ---
 
